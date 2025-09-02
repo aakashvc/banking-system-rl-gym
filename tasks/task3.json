@@ -1,0 +1,92 @@
+{
+  "env": "banking_system",
+  "instructions": "You are Luke Castro with email 'luke.castro207@example.com', and you need to open a SAVINGS account with an initial deposit of $100 in the Randyfurt branch and also belongs to the bank 'Community Trust', once the account is created, it is necessary to make a transfer of $450 from this user's account which is located at the main branch of First National Bank to the new account recently created under the beneficiary name 'Luke Randyfurt', then check the summary of both the accounts.",
+  "actions": [
+    {
+      "name": "list_customers",
+      "arguments": {
+        "first_name": "Luke",
+        "last_name": "Castro",
+        "email": "luke.castro207@example.com"
+      }
+    },
+    {
+      "name": "get_bank_by_name",
+      "arguments": {
+        "name": "Community Trust"
+      }
+    },
+    {
+      "name": "list_branches",
+      "arguments": {
+        "bank_id": 8,
+        "name": "Randyfurt"
+      }
+    },
+    {
+      "name": "create_account",
+      "arguments": {
+        "branch_id": 16,
+        "customer_id": 207,
+        "account_type": "SAVINGS",
+        "initial_deposit": 100
+      }
+    },
+    {
+      "name": "get_bank_by_name",
+      "arguments": {
+        "name": "First National Bank"
+      }
+    },
+    {
+      "name": "list_customer_accounts",
+      "arguments": {
+        "customer_id": 207,
+        "branch_id": 1
+      }
+    },
+    {
+      "name": "get_account_summary",
+      "arguments": {
+        "account_id": 411
+      }
+    },
+    {
+      "name": "add_beneficiary",
+      "arguments": {
+        "account_number": "909059804138",
+        "customer_id": 207,
+        "beneficiary_type": "BANK_ACCOUNT",
+        "name": "Luke Randyfurt",
+        "swift_code": "7S56KXH8"
+      }
+    },
+    {
+      "name": "transfer_to_other_bank_account",
+      "arguments": {
+        "from_account_id": 411,
+        "beneficiary_id": 924,
+        "amount": 450
+      }
+    },
+    {
+      "name": "get_account_summary",
+      "arguments": {
+        "account_id": 411
+      }
+    },
+    {
+      "name": "get_account_summary",
+      "arguments": {
+        "account_id": 480
+      }
+    }
+  ],
+  "outputs": [
+    "100",
+    "Luke Randyfurt",
+    "450",
+    "8,074.37",
+    "550"
+  ]
+}

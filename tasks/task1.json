@@ -1,0 +1,71 @@
+{
+    "env": "banking_system",
+    "instructions": "Your name is Robert Jackson (email: robert.jackson93@example.com). You would like to open a new CHECKING account at the Hallville Branch of Heritage Commercial Bank with an initial deposit of $500. Next, you would like to deposit $300 via ATM, then withdraw $100 through online banking. Finally, you would like to list the account’s recent transactions and retrieve its summary.",
+    "actions": [
+        { 
+            "name": "list_customers",
+            "arguments": { 
+                "first_name": "Robert", 
+                "last_name": "Jackson", 
+                "email": "robert.jackson93@example.com" 
+            } 
+        },
+        { 
+            "name": "get_bank_by_name",
+            "arguments": { 
+                "name": "Heritage Commercial" 
+            } 
+        },
+        { 
+            "name": "list_branches",
+            "arguments": { 
+                "bank_id": "4", 
+                "name": "Hallville" 
+            } 
+        },
+        { 
+            "name": "create_account",
+            "arguments": { 
+                "branch_id": "8", 
+                "customer_id": "93", 
+                "account_type": "CHECKING", 
+                "initial_deposit": "500" 
+            } 
+        },
+        { 
+            "name": "deposit_to_account",
+            "arguments": { 
+                "account_id": "480", 
+                "amount": "300", 
+                "channel": "ATM" 
+            } 
+        },
+        { 
+            "name": "withdraw_from_account",
+            "arguments": { 
+                "account_id": "480", 
+                "amount": "100", 
+                "channel": "ONLINE"
+            } 
+        },
+        {
+            "name": "list_account_transactions",
+            "arguments": {
+                "account_id": "480" 
+            } 
+        },
+        {
+            "name": "get_account_summary",
+            "arguments": { 
+                "account_id": "480" 
+            }
+        }
+    ],
+    "outputs": [
+        "CHECKING",
+        "500",
+        "700",
+        "100",
+        "300"
+    ]
+}

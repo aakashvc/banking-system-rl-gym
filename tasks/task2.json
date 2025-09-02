@@ -1,0 +1,55 @@
+{
+    "env": "banking_system",
+    "instructions": "Your name is Jeffrey Jacobs (email: jeffrey.jacobs118@example.com), and you would like to take a PERSONAL loan of $10,000 at 7% interest for a term of 36 months, starting from 15th August, 2025, from the South Michaelside Branch of Citizens Trust bank. After creating the loan, you would like to retrieve its amortization schedule and generate the first loan statement",
+        "actions": [
+        { 
+            "name": "list_customers",
+            "arguments": { 
+                "first_name": "Jeffrey", 
+                "last_name": "Jacobs", 
+                "email": "jeffrey.jacobs118@example.com" 
+            }
+        },
+        { 
+            "name": "get_bank_by_name",
+            "arguments": { 
+                "name": "Citizens Trust" 
+            } 
+        },
+        { 
+            "name": "list_branches",
+            "arguments": { 
+                "bank_id": "2", 
+                "name": "South Michaelside" 
+            } 
+        },
+        { 
+            "name": "create_loan",
+            "arguments": {
+                "customer_id": "118",
+                "branch_id": "4",
+                "loan_type": "PERSONAL",
+                "principal_amount": "10000",
+                "interest_rate": "7",
+                "tenure_months": "36",
+                "start_date": "2025-08-15"
+            } 
+        },
+        {   
+            "name": "get_loan_amortization_schedule",
+            "arguments": { 
+                "loan_id": "151"
+            } 
+        },
+        {   
+            "name": "generate_loan_statement",
+            "arguments": { 
+                "loan_id": "151"
+            } 
+        }
+    ],
+    "outputs": [
+        "308.77",
+        "PENDING"
+    ]
+}
