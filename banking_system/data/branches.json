@@ -1,0 +1,162 @@
+{
+  "1": {
+    "branch_id": 1,
+    "bank_id": 1,
+    "name": "First National Bank Brianfort Branch",
+    "address": "32643 Burch Plain Apt. 750, Brianfort, MI 68854, USA",
+    "swift_code": "UGSWCNWJ",
+    "contact_number": "816-894-3869"
+  },
+  "2": {
+    "branch_id": 2,
+    "bank_id": 1,
+    "name": "First National Bank East Ritamouth Branch",
+    "address": "38421 Adrian Track, East Ritamouth, ID 89884, USA",
+    "swift_code": "WEOIYUDO",
+    "contact_number": "396-390-8246"
+  },
+  "3": {
+    "branch_id": 3,
+    "bank_id": 2,
+    "name": "Citizens Trust Gonzaleztown Branch",
+    "address": "28544 Jodi Circle, Gonzaleztown, MI 66373, USA",
+    "swift_code": "7NLDR5A0",
+    "contact_number": "922-801-9904"
+  },
+  "4": {
+    "branch_id": 4,
+    "bank_id": 2,
+    "name": "Citizens Trust South Michaelside Branch",
+    "address": "1174 Caitlin Bypass Suite 561, South Michaelside, NJ 24771, USA",
+    "swift_code": "PFMLVASV",
+    "contact_number": "447-189-0787"
+  },
+  "5": {
+    "branch_id": 5,
+    "bank_id": 3,
+    "name": "Pioneer Savings South Mackenziefort Branch",
+    "address": "134 Jimenez Harbor Apt. 500, South Mackenziefort, HI 98062, USA",
+    "swift_code": "546Q5KID",
+    "contact_number": "038-843-6720"
+  },
+  "6": {
+    "branch_id": 6,
+    "bank_id": 3,
+    "name": "Pioneer Savings South Kathryn Branch",
+    "address": "24182 Robert Prairie Apt. 437, South Kathryn, MH 69278, USA",
+    "swift_code": "XFW7QAJZ",
+    "contact_number": "224-623-8672"
+  },
+  "7": {
+    "branch_id": 7,
+    "bank_id": 4,
+    "name": "Heritage Commercial Nicholasmouth Branch",
+    "address": "3272 Sullivan Gardens Apt. 718, Nicholasmouth, MP 47260, USA",
+    "swift_code": "BAYWWXEU",
+    "contact_number": "212-115-6799"
+  },
+  "8": {
+    "branch_id": 8,
+    "bank_id": 4,
+    "name": "Heritage Commercial Hallville Branch",
+    "address": "1149 Sandra Mission Apt. 427, Hallville, FL 10627, USA",
+    "swift_code": "ZUKT3V9X",
+    "contact_number": "491-728-3116"
+  },
+  "9": {
+    "branch_id": 9,
+    "bank_id": 5,
+    "name": "Global Credit Union Kendraborough Branch",
+    "address": "23197 Burton Path Suite 607, Kendraborough, AZ 88846, USA",
+    "swift_code": "D305G5RX",
+    "contact_number": "576-614-5158"
+  },
+  "10": {
+    "branch_id": 10,
+    "bank_id": 5,
+    "name": "Global Credit Union Lake Scotttown Branch",
+    "address": "99286 Kimberly Estate Apt. 456, Lake Scotttown, DE 17651, USA",
+    "swift_code": "HZX6RG12",
+    "contact_number": "249-687-8150"
+  },
+  "11": {
+    "branch_id": 11,
+    "bank_id": 6,
+    "name": "Metro Bank New Jesse Branch",
+    "address": "6080 Smith Lake, New Jesse, FM 38528, USA",
+    "swift_code": "7H3QDEMH",
+    "contact_number": "086-042-9665"
+  },
+  "12": {
+    "branch_id": 12,
+    "bank_id": 6,
+    "name": "Metro Bank Lucaschester Branch",
+    "address": "189 Bond Well, Lucaschester, PW 45722, USA",
+    "swift_code": "VAQP6OLK",
+    "contact_number": "669-948-8277"
+  },
+  "13": {
+    "branch_id": 13,
+    "bank_id": 7,
+    "name": "Union Bank Juanhaven Branch",
+    "address": "9152 Ayala Circles Apt. 313, Juanhaven, LA 77077, USA",
+    "swift_code": "UE4D3Q5J",
+    "contact_number": "221-029-7627"
+  },
+  "14": {
+    "branch_id": 14,
+    "bank_id": 7,
+    "name": "Union Bank Davidshire Branch",
+    "address": "204 Michael Trace, Davidshire, KS 48650, USA",
+    "swift_code": "ET34QF75",
+    "contact_number": "794-082-3642"
+  },
+  "15": {
+    "branch_id": 15,
+    "bank_id": 8,
+    "name": "Community Trust Lake Jamesview Branch",
+    "address": "115 Anna Pike Apt. 566, Lake Jamesview, VI 15625, USA",
+    "swift_code": "HK6MB6MR",
+    "contact_number": "063-028-2307"
+  },
+  "16": {
+    "branch_id": 16,
+    "bank_id": 8,
+    "name": "Community Trust Port Randyfurt Branch",
+    "address": "20017 Navarro Avenue, Port Randyfurt, SC 79295, USA",
+    "swift_code": "7S56KXH8",
+    "contact_number": "693-593-4712"
+  },
+  "17": {
+    "branch_id": 17,
+    "bank_id": 9,
+    "name": "Cornerstone Bank West Heather Branch",
+    "address": "58527 Thomas Route Suite 143, West Heather, MN 55683, USA",
+    "swift_code": "DBXSVU1Z",
+    "contact_number": "066-256-2099"
+  },
+  "18": {
+    "branch_id": 18,
+    "bank_id": 9,
+    "name": "Cornerstone Bank Markbury Branch",
+    "address": "3718 Heather Knolls Suite 475, Markbury, IN 92658, USA",
+    "swift_code": "5G8C02OL",
+    "contact_number": "952-589-4764"
+  },
+  "19": {
+    "branch_id": 19,
+    "bank_id": 10,
+    "name": "Evergreen Bank Lake David Branch",
+    "address": "222 Boone Mount Suite 609, Lake David, TN 50747, USA",
+    "swift_code": "M0JUBY9Y",
+    "contact_number": "295-346-4826"
+  },
+  "20": {
+    "branch_id": 20,
+    "bank_id": 10,
+    "name": "Evergreen Bank Gabriellestad Branch",
+    "address": "660 Rush Groves, Gabriellestad, OR 05358, USA",
+    "swift_code": "S9TEYPIS",
+    "contact_number": "230-082-1699"
+  }
+}

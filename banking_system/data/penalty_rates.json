@@ -1,0 +1,138 @@
+{
+    "1": {
+      "penalty_rate_id": 1,
+      "product_type": "LOAN",
+      "product_subtype": "HOME",
+      "days_overdue_from": 1,
+      "days_overdue_to": 30,
+      "rate": 2.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "2": {
+      "penalty_rate_id": 2,
+      "product_type": "LOAN",
+      "product_subtype": "HOME",
+      "days_overdue_from": 31,
+      "days_overdue_to": 60,
+      "rate": 4.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "3": {
+      "penalty_rate_id": 3,
+      "product_type": "LOAN",
+      "product_subtype": "HOME",
+      "days_overdue_from": 61,
+      "days_overdue_to": null,
+      "rate": 6.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "4": {
+      "penalty_rate_id": 4,
+      "product_type": "LOAN",
+      "product_subtype": "CAR",
+      "days_overdue_from": 1,
+      "days_overdue_to": 30,
+      "rate": 3.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "5": {
+      "penalty_rate_id": 5,
+      "product_type": "LOAN",
+      "product_subtype": "CAR",
+      "days_overdue_from": 31,
+      "days_overdue_to": 60,
+      "rate": 5.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "6": {
+      "penalty_rate_id": 6,
+      "product_type": "LOAN",
+      "product_subtype": "CAR",
+      "days_overdue_from": 61,
+      "days_overdue_to": null,
+      "rate": 7.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "7": {
+      "penalty_rate_id": 7,
+      "product_type": "LOAN",
+      "product_subtype": "PERSONAL",
+      "days_overdue_from": 1,
+      "days_overdue_to": 30,
+      "rate": 5.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "8": {
+      "penalty_rate_id": 8,
+      "product_type": "LOAN",
+      "product_subtype": "PERSONAL",
+      "days_overdue_from": 31,
+      "days_overdue_to": 60,
+      "rate": 7.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "9": {
+      "penalty_rate_id": 9,
+      "product_type": "LOAN",
+      "product_subtype": "PERSONAL",
+      "days_overdue_from": 61,
+      "days_overdue_to": null,
+      "rate": 10.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "10": {
+      "penalty_rate_id": 10,
+      "product_type": "LOAN",
+      "product_subtype": "EDUCATION",
+      "days_overdue_from": 1,
+      "days_overdue_to": 30,
+      "rate": 1.50,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "11": {
+      "penalty_rate_id": 11,
+      "product_type": "LOAN",
+      "product_subtype": "EDUCATION",
+      "days_overdue_from": 31,
+      "days_overdue_to": 60,
+      "rate": 3.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "12": {
+      "penalty_rate_id": 12,
+      "product_type": "LOAN",
+      "product_subtype": "EDUCATION",
+      "days_overdue_from": 61,
+      "days_overdue_to": null,
+      "rate": 5.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "13": {
+      "penalty_rate_id": 13,
+      "product_type": "CARD",
+      "product_subtype": "CREDIT",
+      "days_overdue_from": 1,
+      "days_overdue_to": 30,
+      "rate": 3.50,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "14": {
+      "penalty_rate_id": 14,
+      "product_type": "CARD",
+      "product_subtype": "CREDIT",
+      "days_overdue_from": 31,
+      "days_overdue_to": 60,
+      "rate": 5.50,
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    "15": {
+      "penalty_rate_id": 15,
+      "product_type": "CARD",
+      "product_subtype": "CREDIT",
+      "days_overdue_from": 61,
+      "days_overdue_to": null,
+      "rate": 8.00,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  }
+  
