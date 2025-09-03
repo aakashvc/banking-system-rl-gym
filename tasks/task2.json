@@ -1,55 +1,119 @@
 {
-    "env": "banking_system",
-    "instructions": "Your name is Jeffrey Jacobs (email: jeffrey.jacobs118@example.com), and you would like to take a PERSONAL loan of $10,000 at 7% interest for a term of 36 months, starting from 15th August, 2025, from the South Michaelside Branch of Citizens Trust bank. After creating the loan, you would like to retrieve its amortization schedule and generate the first loan statement",
-        "actions": [
-        { 
-            "name": "list_customers",
-            "arguments": { 
-                "first_name": "Jeffrey", 
-                "last_name": "Jacobs", 
-                "email": "jeffrey.jacobs118@example.com" 
-            }
-        },
-        { 
-            "name": "get_bank_by_name",
-            "arguments": { 
-                "name": "Citizens Trust" 
-            } 
-        },
-        { 
-            "name": "list_branches",
-            "arguments": { 
-                "bank_id": "2", 
-                "name": "South Michaelside" 
-            } 
-        },
-        { 
-            "name": "create_loan",
-            "arguments": {
-                "customer_id": "118",
-                "branch_id": "4",
-                "loan_type": "PERSONAL",
-                "principal_amount": "10000",
-                "interest_rate": "7",
-                "tenure_months": "36",
-                "start_date": "2025-08-15"
-            } 
-        },
-        {   
-            "name": "get_loan_amortization_schedule",
-            "arguments": { 
-                "loan_id": "151"
-            } 
-        },
-        {   
-            "name": "generate_loan_statement",
-            "arguments": { 
-                "loan_id": "151"
-            } 
+  "env": "banking_system",
+  "instructions": "For the customer Jeffrey Jacobs (email: jeffrey.jacobs118@example.com), and create a PERSONAL loan of $10,000 at 7% interest for a term of 36 months, starting from 15th August, 2025, from the South Michaelside Branch of Citizens Trust bank. Also, generate the first loan statement",
+  "actions": [
+    {
+      "name": "list_customers",
+      "arguments": {
+        "first_name": "Jeffrey",
+        "last_name": "Jacobs",
+        "email": "jeffrey.jacobs118@example.com"
+      },
+      "output": [
+        {
+          "address": "988 Kimberly Wells Apt. 160, South Kristen, UT 09552, USA",
+          "created_at": "2025-04-07T19:05:03.144578",
+          "customer_id": 118,
+          "dob": "1987-08-20",
+          "email": "jeffrey.jacobs118@example.com",
+          "first_name": "Jeffrey",
+          "last_name": "Jacobs",
+          "phone": "066-234-5761",
+          "updated_at": "2025-04-07T19:05:03.144578"
         }
-    ],
-    "outputs": [
-        "308.77",
-        "PENDING"
-    ]
+      ]
+    },
+    {
+      "name": "get_bank_by_name",
+      "arguments": {
+        "name": "Citizens Trust"
+      },
+      "output": {
+        "bank_id": 2,
+        "main_branch_id": 3,
+        "name": "Citizens Trust"
+      }
+    },
+    {
+      "name": "list_branches",
+      "arguments": {
+        "bank_id": "2",
+        "name": "South Michaelside"
+      },
+      "output": [
+        {
+          "address": "1174 Caitlin Bypass Suite 561, South Michaelside, NJ 24771, USA",
+          "bank_id": 2,
+          "branch_id": 4,
+          "contact_number": "447-189-0787",
+          "name": "Citizens Trust South Michaelside Branch",
+          "swift_code": "PFMLVASV"
+        }
+      ]
+    },
+    {
+      "name": "create_loan",
+      "arguments": {
+        "customer_id": "118",
+        "branch_id": "4",
+        "loan_type": "PERSONAL",
+        "principal_amount": "10000",
+        "interest_rate": "7",
+        "tenure_months": "36",
+        "start_date": "2025-08-15"
+      },
+      "output": {
+        "loan": {
+          "branch_id": 4,
+          "created_at": "2025-09-03T13:32:38.954998",
+          "customer_id": 118,
+          "end_date": null,
+          "interest_rate": 7,
+          "loan_account_number": "65887094408",
+          "loan_id": 151,
+          "principal_amount": 10000,
+          "start_date": "2025-08-15",
+          "status": "ACTIVE",
+          "tenure": 36,
+          "type": "PERSONAL"
+        },
+        "message": "Loan created successfully"
+      }
+    },
+    {
+      "name": "generate_loan_statement",
+      "arguments": {
+        "loan_id": "151"
+      },
+      "output": {
+        "message": "Loan statement generated",
+        "statement": {
+          "created_at": "2025-09-03T13:33:23.172308",
+          "due_date": "2025-09-23",
+          "late_fee_amount": 0,
+          "loan_id": 151,
+          "penalty_rate_id": null,
+          "period_end": "2025-09-13",
+          "period_start": "2025-08-15",
+          "scheduled_amount": 308.77,
+          "statement_id": 2280,
+          "status": "PENDING"
+        }
+      }
+    }
+  ],
+  "verifiers": [
+    {
+      "mutation": "create_loan",
+      "sql": "SELECT COUNT(*) FROM loans WHERE loan_id = 151 AND customer_id = 118 AND branch_id = 4 AND type = 'PERSONAL' AND principal_amount = 10000 AND interest_rate = 7.0 AND tenure = 36 AND start_date = '2025-08-15' AND status = 'ACTIVE';",
+      "comparison": "equal_to",
+      "expected_value": 1
+    },
+    {
+      "mutation": "generate_loan_statement",
+      "sql": "SELECT COUNT(*) FROM loan_statements WHERE statement_id = 2280 AND loan_id = 151 AND scheduled_amount = 308.77 AND status = 'PENDING';",
+      "comparison": "equal_to",
+      "expected_value": 1
+    }
+  ]
 }

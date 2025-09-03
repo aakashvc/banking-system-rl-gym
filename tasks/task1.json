@@ -1,71 +1,183 @@
 {
-    "env": "banking_system",
-    "instructions": "Your name is Robert Jackson (email: robert.jackson93@example.com). You would like to open a new CHECKING account at the Hallville Branch of Heritage Commercial Bank with an initial deposit of $500. Next, you would like to deposit $300 via ATM, then withdraw $100 through online banking. Finally, you would like to list the account’s recent transactions and retrieve its summary.",
-    "actions": [
-        { 
-            "name": "list_customers",
-            "arguments": { 
-                "first_name": "Robert", 
-                "last_name": "Jackson", 
-                "email": "robert.jackson93@example.com" 
-            } 
-        },
-        { 
-            "name": "get_bank_by_name",
-            "arguments": { 
-                "name": "Heritage Commercial" 
-            } 
-        },
-        { 
-            "name": "list_branches",
-            "arguments": { 
-                "bank_id": "4", 
-                "name": "Hallville" 
-            } 
-        },
-        { 
-            "name": "create_account",
-            "arguments": { 
-                "branch_id": "8", 
-                "customer_id": "93", 
-                "account_type": "CHECKING", 
-                "initial_deposit": "500" 
-            } 
-        },
-        { 
-            "name": "deposit_to_account",
-            "arguments": { 
-                "account_id": "480", 
-                "amount": "300", 
-                "channel": "ATM" 
-            } 
-        },
-        { 
-            "name": "withdraw_from_account",
-            "arguments": { 
-                "account_id": "480", 
-                "amount": "100", 
-                "channel": "ONLINE"
-            } 
-        },
+  "env": "banking_system",
+  "instructions": "For the customer Robert Jackson (email: robert.jackson93@example.com). Open a new CHECKING account at the Hallville Branch of Heritage Commercial Bank with an initial deposit of $500. Deposit $300 via ATM. Finally, list the account’s recent transactions and retrieve its summary.",
+  "actions": [
+    {
+      "name": "list_customers",
+      "arguments": {
+        "first_name": "Robert",
+        "last_name": "Jackson",
+        "email": "robert.jackson93@example.com"
+      },
+      "output": [
         {
-            "name": "list_account_transactions",
-            "arguments": {
-                "account_id": "480" 
-            } 
-        },
-        {
-            "name": "get_account_summary",
-            "arguments": { 
-                "account_id": "480" 
-            }
+          "address": "4000 Solis Ville, Orozcoville, HI 51848, USA",
+          "created_at": "2025-03-18T02:41:55.293173",
+          "customer_id": 93,
+          "dob": "1994-01-19",
+          "email": "robert.jackson93@example.com",
+          "first_name": "Robert",
+          "last_name": "Jackson",
+          "phone": "796-018-2375",
+          "updated_at": "2025-03-18T02:41:55.293173"
         }
-    ],
-    "outputs": [
-        "CHECKING",
-        "500",
-        "700",
-        "100",
-        "300"
-    ]
+      ]
+    },
+    {
+      "name": "get_bank_by_name",
+      "arguments": {
+        "name": "Heritage Commercial"
+      },
+      "output": {
+        "bank_id": 4,
+        "main_branch_id": 7,
+        "name": "Heritage Commercial"
+      }
+    },
+    {
+      "name": "list_branches",
+      "arguments": {
+        "bank_id": "4",
+        "name": "Hallville"
+      },
+      "output": [
+        {
+          "address": "1149 Sandra Mission Apt. 427, Hallville, FL 10627, USA",
+          "bank_id": 4,
+          "branch_id": 8,
+          "contact_number": "491-728-3116",
+          "name": "Heritage Commercial Hallville Branch",
+          "swift_code": "ZUKT3V9X"
+        }
+      ]
+    },
+    {
+      "name": "create_account",
+      "arguments": {
+        "branch_id": "8",
+        "customer_id": "93",
+        "account_type": "CHECKING",
+        "initial_deposit": "500"
+      },
+      "output": {
+        "account": {
+          "account_id": 480,
+          "account_number": "909059804138",
+          "balance": 500,
+          "branch_id": 8,
+          "created_at": "2025-09-03T13:27:48.720672",
+          "customer_id": 93,
+          "opened_date": "2025-09-03",
+          "status": "OPEN",
+          "type": "CHECKING",
+          "updated_at": "2025-09-03T13:27:48.720672"
+        },
+        "message": "Account created successfully"
+      }
+    },
+    {
+      "name": "deposit_to_account",
+      "arguments": {
+        "account_id": "480",
+        "amount": "300",
+        "channel": "ATM"
+      },
+      "output": {
+        "message": "Deposit successful",
+        "transaction": {
+          "account_id": 480,
+          "amount": 300,
+          "beneficiary_id": null,
+          "card_id": null,
+          "card_tx_status": null,
+          "channel": "ATM",
+          "created_at": "2025-09-03T13:28:00.323005",
+          "merchant": null,
+          "occurred_at": "2025-09-03T13:28:00.323005",
+          "transaction_id": 10678,
+          "type": "DEPOSIT"
+        }
+      }
+    },
+    {
+      "name": "list_account_transactions",
+      "arguments": {
+        "account_id": "480"
+      },
+      "output": [
+        {
+          "account_id": 480,
+          "amount": 300,
+          "beneficiary_id": null,
+          "card_id": null,
+          "card_tx_status": null,
+          "channel": "ATM",
+          "created_at": "2025-09-03T13:28:00.323005",
+          "merchant": null,
+          "occurred_at": "2025-09-03T13:28:00.323005",
+          "transaction_id": 10678,
+          "type": "DEPOSIT"
+        },
+        {
+          "account_id": 480,
+          "amount": 100,
+          "beneficiary_id": null,
+          "card_id": null,
+          "card_tx_status": null,
+          "channel": "ONLINE",
+          "created_at": "2025-09-03T13:28:38.715267",
+          "merchant": null,
+          "occurred_at": "2025-09-03T13:28:38.715267",
+          "transaction_id": 10679,
+          "type": "WITHDRAWAL"
+        }
+      ]
+    },
+    {
+      "name": "get_account_summary",
+      "arguments": {
+        "account_id": "480"
+      },
+      "output": {
+        "balance": 700,
+        "recent_txns": [
+          {
+            "account_id": 480,
+            "amount": 100,
+            "beneficiary_id": null,
+            "card_id": null,
+            "card_tx_status": null,
+            "channel": "ONLINE",
+            "created_at": "2025-09-03T13:28:38.715267",
+            "merchant": null,
+            "occurred_at": "2025-09-03T13:28:38.715267",
+            "transaction_id": 10679,
+            "type": "WITHDRAWAL"
+          },
+          {
+            "account_id": 480,
+            "amount": 300,
+            "beneficiary_id": null,
+            "card_id": null,
+            "card_tx_status": null,
+            "channel": "ATM",
+            "created_at": "2025-09-03T13:28:00.323005",
+            "merchant": null,
+            "occurred_at": "2025-09-03T13:28:00.323005",
+            "transaction_id": 10678,
+            "type": "DEPOSIT"
+          }
+        ],
+        "status": "OPEN"
+      }
+    }
+  ],
+  "verifiers": [
+    {
+      "mutation": "get_account_summary",
+      "sql": "SELECT COUNT(*) FROM accounts WHERE account_id = 480 AND customer_id = 93 AND account_type = 'CHECKING' AND balance = 700.00;",
+      "comparison": "equal_to",
+      "expected_value": 1
+    }
+  ]
 }
